@@ -84,9 +84,9 @@ elseif (UNIX)
     set(glfw_SOURCES ${glfw_SOURCES} src/linux_joystick.c)
 endif()
 
-add_library(glfw STATIC ${glfw_SOURCES} ${glfw_HEADERS})
-target_include_directories(glfw PUBLIC include)
-target_include_directories(glfw PRIVATE ${glfw_INCLUDE_DIRS})
-target_link_libraries(glfw INTERFACE ${glfw_LIBRARIES})
+add_library(box2dglfw STATIC ${glfw_SOURCES} ${glfw_HEADERS})
+target_include_directories(box2dglfw PUBLIC include)
+target_include_directories(box2dglfw PRIVATE ${glfw_INCLUDE_DIRS})
+target_link_libraries(box2dglfw INTERFACE ${glfw_LIBRARIES})
 
 source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${glfw_SOURCES} ${glfw_HEADERS})
